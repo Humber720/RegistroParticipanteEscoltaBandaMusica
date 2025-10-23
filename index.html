@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Escolta - Banda de Música</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+             <header>
+                <h1>BANDA DE MÚSICA UETHP "JUPAPINA"</h1>
+                <p class="subtitle">Prof. Humberto Yupanqui C.</p>
+                <p class="intro">
+                  Se les invita a ser participe para el Concurso de Bandas como escolta con rifle para marcha,
+                  si esta interado(a) anote su nombre completo y comuniquese con el Profesor de Música a cel. 73747321
+                </p>
+              </header>
+        <form id="studentForm">
+            <label>Nombre y Apellido:</label>
+            <input type="text" id="nombre" required placeholder="Ej. Juan Pérez">
+
+            <label for="curso">Curso:</label>
+            <select id="curso" name="curso" required>
+                <option value="" disabled selected>Seleccione curso</option>
+                <option value="Primero Secundaria">Primero-Secundaria </option>
+                <option value="Primero Secundaria">Segundo-Secundaria </option>
+                <option value="Primero Secundaria">Tercero-Secundaria </option>
+                <option value="Primero Secundaria">Cuarto-Secundaria </option>
+                <option value="Primero Secundaria">Quinto-Secundaria </option>
+                <option value="Primero Secundaria">Sexto-Secundaria </option>
+                <!-- Más maestros -->
+            </select>
+
+            <label>Nro celular:</label>
+            <input type="text" id="celular" required placeholder="Ej. 73747321">
+
+            <label for="uniforme">¿Esta de acuerdo en fletar y conseguir el uniforme?</label>
+            <textarea id="uniforme" name="uniforme" rows="3" placeholder="Ej: Si estoy de acuerdo en fletar y conseguir el uniforme......etc." required></textarea>
+            
+<!-- Botón de envío con spinner integrado -->
+<div class="send-container">
+    <button type="submit" id="sendList">Enviar</button>
+    <div id="loading" class="loading" style="display:none;">
+        <span class="spinner"></span>
+        <span class="loading-text">⏳ Procesando tu número...</span>
+    </div>
+</div>
+
+
+  <!-- Modal -->
+  <div id="modal" class="modal" style="display:none; position: fixed; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.5); justify-content:center; align-items:center; z-index: 9999;">
+    <div class="modal-contenido" style="background:#fff; padding: 20px 30px; border-radius: 12px; max-width: 400px; text-align: center; font-family: 'Segoe UI', Tahoma, sans-serif;">
+      <p id="modal-mensaje">✅ ¡Formulario enviado correctamente!</p>
+      <button id="cerrar-modal" style="margin: 8px 10px; padding: 8px 16px; border:none; border-radius:6px; background:#888; color:#fff; cursor:pointer;">Cerrar</button>
+      <button id="descargarPDF" style="margin: 8px 10px; padding: 8px 16px; border:none; border-radius:6px; background:#2980b9; color:#fff; cursor:pointer; display:none;">Descargar PDF</button>
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+  
+    <script src="script.js"></script>
+
+    <!-- PUBLICIDAD (debajo del formulario) -->
+<div class="publicidad">
+  <img src="img/pub1.jpg" class="active" alt="Publicidad 1">
+  <img src="img/pub2.jpg" alt="Publicidad 2">
+  <img src="img/pub3.jpg" alt="Publicidad 4">
+  <img src="img/pub4.jpg" alt="Publicidad 6">
+</div>
+
+</body>
+</html>
